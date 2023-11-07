@@ -1,0 +1,259 @@
+@import 'normalize.css';
+@import 'variables.scss';
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+$black-Default: #303030;
+$Lilac-Defaul: #BB69C8;
+$Lilac-20: #F1DBF4;
+
+@mixin button($c,$f,$bg,$br,$p,$td){
+    color: $c;
+    font-size: $f;
+    background: $bg;
+    border-radius: $br;
+    padding: $p;
+    text-decoration: $td;
+}
+
+body{
+    max-width: 1254px;
+    padding: 0 30px;
+    margin: 0 auto;
+    background:  #FFF8FF;
+}
+
+header{
+    height: 600px;
+    .Svg-left{
+        position: relative;
+        bottom: 575px;
+        right: 410px;
+    }
+    .sparkle-little{
+        position: relative;
+        bottom: 1260px;
+        right: 30px;
+    }
+    .sparkle-big{
+        position: relative;
+        right: 30px;
+        bottom: 1300px;
+    }
+    .Vector-right{
+        position: relative;
+        width: 253px;
+        bottom: 520px;
+        left:  774px; 
+    }
+    .sparkle-big-right{
+        position: relative;
+        bottom: 1030px;
+        left: 600px; 
+    }
+    .sparkle-little-right{
+        position: relative;
+        bottom: 1020px;
+        left: 645px; 
+    }
+}
+.container {
+    max-width: 1254px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0 12px 0;
+
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .nav {
+        display: flex;
+
+        .nav-list{
+            display: inline-flex;
+            gap: 24px;
+            padding: 18.5px 0;
+
+            .nav-link{
+                color: $black-Default;
+                font-size: 16px;
+                font-family: 'Gilroy';
+                font-weight: 600;
+                text-decoration: none;
+                align-items: center;
+            }
+        
+        }
+    }
+
+    .btn-list{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .enter{
+            @include button($Lilac-Defaul,16px,$Lilac-20,24px,15px 24px,none);
+            font-family: 'Gilroy';
+            font-weight: 600;
+        }
+        .account{
+            @include button(#ffffff,16px,$Lilac-Defaul,24px,15px 24px,none);
+            font-family: 'Gilroy';
+            font-weight: 600;
+        }
+    }
+}
+
+.header-row{
+    display: inline-flex;
+    margin-top: 93px;
+
+    h1{
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 62px;
+        color: $black-Default;
+        margin: 0 0 43px 0 ;
+    }
+
+    span{
+        font-family: 'Gilroy';
+        font-weight: 400;
+        font-size: 24px;
+        color: #646264;
+    }
+
+    .btn-list{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 53px;
+
+        .create-an-account{
+            @include button(#ffffff,16px,$Lilac-Defaul,24px,15px 24px,none);
+            font-family: 'Gilroy';
+            font-weight: 600;
+        }
+
+        .free-cheat{
+            @include button($Lilac-Defaul,16px,$Lilac-20,24px,15px 24px,none);
+            font-family: 'Gilroy';
+            font-weight: 600;
+            img{
+                position: relative;
+                top: 4px;
+                margin-right: 12px;
+            }
+        }
+    }
+
+    .Messages-img{
+        position: relative;
+        left: 87px;
+    }
+
+}
+
+
+.heading{
+    display: block;
+    .h3-main{
+        text-align: center;
+        color: $black-Default;
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 28px;
+        margin: 40px  0 16px 0;
+    }
+    .p-subtitle{
+        text-align: center;
+        color: #8D8A8D;
+        font-family: 'Gilroy';
+        font-size: 20px;
+        margin: 0 0 32px 0;
+    }
+}
+
+.avhievements-row{
+    display: grid;
+    grid-template-columns: repeat(2,618px);
+    gap: 20px;
+    justify-content: center;
+    .avhievements-card{
+        display: flex;
+        .avhievements-card-img{
+            align-self: center;
+            margin: 40px 20px 40px 24px;
+        }
+        .avhievements-card-title{
+            display: block;
+            margin-top: auto;
+            margin-bottom: auto;
+            h3{
+                color: $black-Default;
+                font-family: 'Gilroy';
+                font-weight: 600;
+                font-size: 28px;
+                margin: 0 0 16px 0;
+            }
+            p{
+                color: #8D8A8D;
+                font-family: 'Gilroy';
+                font-size: 20px;
+                margin: 0 0 0 0;
+            }
+        }
+    }
+  
+}
+
+.section-title{
+    display: block;
+    text-align: center;
+    h2{
+        color: $black-Default;
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 28px;
+        margin: 48px 0 16px 0;
+    }
+    p{
+        color: #8D8A8D;
+        font-family: 'Gilroy';
+        font-size: 20px;
+        margin: 0 0 32px 0;
+    }
+}
+
+.quick-order__row{
+    display: grid;
+    grid-template-columns: 345px 345px 1fr;
+    gap: 20px;
+    .card{
+        -webkit-box-shadow: 0 4px 25px rgba(1,13,130,.12);
+        box-shadow: 0 4px 25px rgba(1,13,130,.12);
+        border-radius: 5px;
+        .quick-order__item{
+            padding: 30px 35px 50px;
+            .quick-order__tit{
+                font-weight: 600;
+                font-size: clamp(.75rem,1.3vw + .2rem,1rem);
+                line-height: 24px;
+                letter-spacing: .1px;
+                color: #7874fe;
+                margin-bottom: 20px;
+                .quick-order__list .radio {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+
